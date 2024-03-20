@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -15,8 +15,24 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <p class="font-League text-xl">Welcome to My Website</p>
+<body class="min-h-screen bg-white dark:bg-black dark:text-sky-200">
+    <header class="w-screen fixed top-0 z-1">
+        <section class="border border-red-700 py-6 max-w-4xl mx-auto flex justify-between items-center">
+            <nav class="bg-sky-200 dark:bg-slate-900 bg-opacity-50 rounded-full shadow-lg py-4 px-6 mx-auto space-x-8 text-xl justify-center"
+                aria-label="main">
+                <a href="#hero" class="hover:text-sky-100 dark:hover:text-white transition ease-in-out">Home</a>
+                <a href="#projects" class="hover:text-sky-100 dark:hover:text-white transition ease-in-out">Projects</a>
+                <a href="#contact" class="hover:text-sky-100 dark:hover:text-white transition ease-in-out">Contact</a>
+            </nav>
+        </section>
+    </header>
+
+    <main class="mx-auto">
+        <section id="hero" class="">
+            <img class="dark:hidden min-h-screen object-cover" src="./img/EarthDay.jpg" alt="Earth Day View" />
+            <img class="hidden dark:flex min-h-screen object-cover" src="./img/EarthNight.jpg" alt="Earth Night View" />
+        </section>
+    </main>
 </body>
 
 </html>
