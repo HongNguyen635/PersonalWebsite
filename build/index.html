@@ -16,23 +16,134 @@
 </head>
 
 <body class="min-h-screen bg-white dark:bg-black dark:text-sky-200">
-    <header class="w-screen fixed top-0 z-1">
+    <header class="w-screen sticky top-0 z-1">
         <section class="border border-red-700 py-6 max-w-4xl mx-auto flex justify-between items-center">
             <nav class="bg-sky-200 dark:bg-slate-900 bg-opacity-50 rounded-full shadow-lg py-4 px-6 mx-auto space-x-8 text-xl justify-center"
                 aria-label="main">
-                <a href="#hero" class="hover:text-sky-100 dark:hover:text-white transition ease-in-out">Home</a>
-                <a href="#projects" class="hover:text-sky-100 dark:hover:text-white transition ease-in-out">Projects</a>
-                <a href="#contact" class="hover:text-sky-100 dark:hover:text-white transition ease-in-out">Contact</a>
+                <a href="#home" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Home</a>
+                <a href="#projects" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Projects</a>
+                <a href="#contact" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Contact</a>
             </nav>
         </section>
     </header>
 
     <main class="mx-auto">
-        <section id="hero" class="">
+        <section id="hero" class="fixed top-0 -z-10">
             <img class="dark:hidden min-h-screen object-cover" src="./img/EarthDay.jpg" alt="Earth Day View" />
             <img class="hidden dark:flex min-h-screen object-cover" src="./img/EarthNight.jpg" alt="Earth Night View" />
         </section>
+
+        <div class="fixed right-0 -z-10">
+            <!-- <h1 class="font-League text-white text-8xl text-right px-20">Hong Nguyen</h1> -->
+            <h1 class="font-League text-white text-6xl sm:text-8xl text-right px-20 pt-56">HONG NGUYEN</h1>
+            <h2 class="text-white text-xl sm:text-2xl italic text-right px-20">Computer Engineering Student</h2>
+            <h2 class="text-white text-xl sm:text-2xl italic text-right px-20">________________</h2>
+        </div>
+
+        <!-- Blank div for scroll -->
+        <div id="home" class="min-h-screen">
+        </div>
+
+
+        <section id="projects" class="bg-zinc-50 dark:bg-black p-8 pb-12">
+            <div class="flex flex-col items-center">
+                <h2 class="text-3xl font-bold text-center mb-6 text-black dark:text-white">Projects</h2>
+                <p class="w-2/3 text-lg text-center justify-center mb-8 dark:text-white">Below, you'll find a list of
+                    technical projects
+                    I've developed throughout my study, spanning from software applications to hardware prototypes.</p>
+            </div>
+            <ul class="list-none mx-auto flex flex-col sm:flex-row flex-wrap justify-center items-start gap-8">
+                <!-- Project 1 -->
+                <li
+                    class="w-2/3 sm:w-2/5 sm:max-w-[18rem] flex flex-col bg-white dark:bg-slate-800 rounded-2xl shadow-xl transition ease-in-out hover:bg-sky-50 hover:cursor-pointer dark:hover:bg-slate-700">
+                    <a href="http://" target="_blank">
+                        <img src="img/Project1_PDF.png" alt="PDF Website Project"
+                            class="dark:hidden rounded-t-2xl mb-4 w-fit self-center">
+                        <img src="img/Project1_PDF_Dark.png" alt="PDF Website Project"
+                            class="hidden dark:block rounded-t-2xl mb-4 w-fit self-center">
+
+                        <h3 class="text-xl font-semibold text-black dark:text-white px-4 pt-2">PDF Operations Website
+                        </h3>
+                        <p class="px-4 pb-6 sm:block  mt-2 text-slate-600 dark:text-blue-200 dark:hover:text-blue-50">
+                            A website that merges, converts, and performs other operations on PDFs.
+                        </p>
+                    </a>
+                </li>
+
+                <!-- Project 2 -->
+                <li
+                    class="w-2/3 sm:w-2/5 sm:max-w-[18rem] flex flex-col bg-white dark:bg-slate-800 rounded-2xl shadow-xl transition ease-in-out hover:bg-sky-50 hover:cursor-pointer dark:hover:bg-slate-700">
+                    <a href="http://" target="_blank">
+                        <img src="img/3_precision_plot.png" alt="Arm Simulation"
+                            class="rounded-t-2xl mb-4 w-fit self-center">
+                        <h3 class="text-xl font-semibold text-black dark:text-white px-4 pt-2">Robotic Arm Simulation
+                        </h3>
+                        <p class="px-4 pb-6 sm:block  mt-2 text-slate-600 dark:text-blue-200 dark:hover:text-blue-50">
+                            A simulation that plots all possible reachable points for a robotics arm.
+                        </p>
+                    </a>
+                </li>
+
+
+                <!-- Project 3 -->
+                <li
+                    class="w-2/3 sm:w-2/5 sm:max-w-[18rem] flex flex-col bg-white dark:bg-slate-800 rounded-2xl shadow-xl transition ease-in-out hover:bg-sky-50 hover:cursor-pointer dark:hover:bg-slate-700">
+                    <a href="http://" target="_blank">
+                        <img src="img/Arm_Code_Light.png" alt="Arm Code"
+                            class="dark:hidden rounded-t-2xl mb-4 w-fit self-center">
+                        <img src="img/Arm_Code_Dark.png" alt="Arm Code"
+                            class="hidden dark:block rounded-t-2xl mb-4 w-fit self-center">
+
+                        <h3 class="text-xl font-semibold text-black dark:text-white px-4 pt-2">Robotic Arm Code Module
+                        </h3>
+                        <p class="px-4 pb-6 sm:block  mt-2 text-slate-600 dark:text-blue-200 dark:hover:text-blue-50">
+                            A program that controls the robotic arm movement.
+                        </p>
+                    </a>
+                </li>
+
+                <!-- Project 4 -->
+                <!-- <li
+                    class="w-2/3 sm:w-2/5 sm:max-w-[18rem] flex flex-col bg-white dark:bg-slate-800 rounded-2xl shadow-xl transition ease-in-out hover:bg-sky-50 hover:cursor-pointer dark:hover:bg-slate-700">
+                    <a href="http://" target="_blank">
+                        <img src="img/Arm_Code_Light.png" alt="Arm Code"
+                            class="dark:hidden rounded-t-2xl mb-4 w-fit self-center">
+                        <img src="img/Arm_Code_Dark.png" alt="Arm Code"
+                            class="hidden dark:block rounded-t-2xl mb-4 w-fit self-center">
+
+                        <h3 class="text-xl font-semibold text-black dark:text-white px-4 pt-2">Personal Portfolio
+                            Website
+                        </h3>
+                        <p class="px-4 pb-6 sm:block  mt-2 text-slate-600 dark:text-blue-200 dark:hover:text-blue-50">
+                            My personal website.
+                        </p>
+                    </a>
+                </li> -->
+            </ul>
+            </h2>
+        </section>
+
+        <!-- <hr class="border-black border-1"> -->
+
+
     </main>
+    <footer id="contact" class="bg-zinc-100 dark:bg-black dark:text-white py-4 mt-auto">
+        <section class="flex flex-col items-center justify-around">
+            <h2 class="not-italic font-semibold text-lg">Get In Touch</h2>
+            <address
+                class="flex flex-row justify-between items-center gap-1 sm:gap-4 px-6 max-w-[16rem] sm:max-w-xs mx-a">
+                <a href="https://www.linkedin.com/in/hong-nguyen-k/" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/linkedIn.png" alt="LinkedIn logo">
+                </a>
+                <a href="mailto:hong.nguyen.k54@gmail.com" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/Mail.png">
+                </a>
+                <a href="https://github.com/HongNguyen635" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/github.png" alt="GitHub logo">
+                </a>
+            </address>
+        </section>
+    </footer>
 </body>
 
 </html>
