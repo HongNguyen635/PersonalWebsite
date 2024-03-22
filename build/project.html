@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hong Nguyen Personal Portfolio Website">
+    <title>Hong Nguyen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/" type="image/x-icon">
+    <script type="module" src="js/main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-white dark:bg-black dark:text-sky-200 overflow-x-hidden">
+    <header class="w-screen sticky top-0 z-1">
+        <section class="border border-red-700 py-6 max-w-4xl mx-auto flex justify-between items-center">
+            <div id="toggle-light-mode"
+                class="absolute rounded-full bg-sky-200 dark:bg-slate-800 w-fit p-2 mt-40 sm:mt-0 ml-[45%] sm:ml-8 hover:cursor-pointer">
+                <img id="sun-icon" src="img/sun.png" alt="Light Mode Image" class="block w-6 invert">
+                <img id="moon-icon" src="img/moon.png" alt="Light Mode Image" class="hidden w-6">
+            </div>
+
+            <nav class="bg-sky-200 dark:bg-slate-900 bg-opacity-50 rounded-full shadow-lg py-4 px-6 mx-auto space-x-8 text-xl justify-center"
+                aria-label="main">
+                <a href="home.html" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Home</a>
+                <a href="#contact" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Contact</a>
+            </nav>
+        </section>
+
+
+    </header>
+
+    <main class="mx-auto">
+
+
+    </main>
+    <footer id="contact" class="bg-zinc-100 dark:bg-black dark:text-white py-8 mt-auto">
+        <section class="flex flex-col items-center justify-around">
+            <h2 class="not-italic font-semibold text-lg">Get In Touch</h2>
+            <address
+                class="flex flex-row justify-between items-center gap-1 sm:gap-4 px-6 max-w-[16rem] sm:max-w-xs mx-a">
+                <a href="https://www.linkedin.com/in/hong-nguyen-k/" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/linkedIn.png" alt="LinkedIn logo">
+                </a>
+                <a href="mailto:hong.nguyen.k54@gmail.com" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/Mail.png">
+                </a>
+                <a href="https://github.com/HongNguyen635" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/github.png" alt="GitHub logo">
+                </a>
+            </address>
+        </section>
+    </footer>
+</body>
+
+</html>
