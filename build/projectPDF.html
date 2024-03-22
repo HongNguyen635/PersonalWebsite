@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hong Nguyen Personal Portfolio Website">
+    <title>Hong Nguyen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/" type="image/x-icon">
+    <script type="module" src="js/main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-white dark:bg-black dark:text-sky-200 overflow-x-hidden">
+    <header class="w-screen sticky top-0 z-1">
+        <section class="py-6 max-w-4xl mx-auto flex justify-between items-center">
+            <div id="toggle-light-mode"
+                class="absolute rounded-full bg-sky-200 dark:bg-slate-800 w-fit p-2 mt-32 sm:mt-0 ml-[42.5%] sm:ml-8 hover:cursor-pointer">
+                <img id="sun-icon" src="img/sun.png" alt="Light Mode Image" class="block w-6 invert">
+                <img id="moon-icon" src="img/moon.png" alt="Light Mode Image" class="hidden w-6">
+            </div>
+
+            <nav class="bg-sky-200 dark:bg-slate-900 bg-opacity-50 rounded-full shadow-lg py-4 px-6 mx-auto space-x-8 text-xl justify-center"
+                aria-label="main">
+                <a href="home.html" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Home</a>
+                <a href="#contact" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Contact</a>
+            </nav>
+        </section>
+
+
+    </header>
+
+    <main class="max-w-4xl mx-auto bg-zinc-50 dark:bg-black text-black dark:text-white">
+        <!-- Cover Page section -->
+        <section class="p-8 flex flex-col justify-center items-center">
+            <h1 class="text-3xl font-bold text-center mb-6 mt-4 sm:mt-0">PDF Operations Website</h1>
+            <p class="text-lg text-center justify-center mb-8">Quick way to
+                combine PDF, compress
+                PDF, and more!</p>
+            <img src="img/Project1_PDF.png" alt="PDF Cover Page" class="rounded-lg dark:hidden">
+            <img src="img/Project1_PDF_Dark.png" alt="PDF Cover Page" class="rounded-lg hidden dark:block">
+        </section>
+
+        <!-- Process section -->
+        <section class="p-8 flex flex-col">
+            <h2 class="text-xl font-bold mb-2">Timeline</h2>
+            <p class="mb-2">September 2023 &#8211; January 2024</p>
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Implementation Details</h2>
+            <p class="mb-2"><b>Programming Language:</b> Python (Backend), HTML, CSS, and JavaScript.</p>
+            <p class="mb-2"><b>Frameworks:</b> Django and Tailwind CSS.</p>
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Motivation</h2>
+            <p class="mb-2">
+                Since the pandemic, most class assignments nowadays require scanning images and combining everything
+                into one PDF. Usually, I work on my assignments both on paper and the tablet's notebook, so I always
+                have multiple separate PDFs and images.
+            </p>
+            <p class="mb-2">
+                I don't feel safe using the only free application because my antivirus program keeps marking them as
+                suspicious.
+
+            </p>
+            <p class="mb-2">
+                I decided to make this website to help myself and my classmates quickly combine PDFs to turn in class
+                assignments.
+            </p>
+
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Goal</h2>
+            <p class="mb-2">Develop a functional website with:</p>
+            <ul class="list-disc">
+                <li class="ml-4 p-1">Light and Dark mode (compatible with system preferences).</li>
+                <li class="ml-4 p-1">Have at least: Combine, Compress, and Watermark functionality.</li>
+                <li class="ml-4 p-1">User-friendly (both mobile and PC).</li>
+            </ul>
+
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Planning</h2>
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Tasks Checklist:</h3>
+
+            <ul class="list-decimal list-inside">
+                <li class="ml-4 p-1">UI designs</li>
+                <li class="ml-4 p-1">Methods to get user input</li>
+                <li class="ml-4 p-1">File conversions & merging</li>
+                <li class="ml-4 p-1">File Optimization</li>
+                <li class="ml-4 p-1">Output: Downloadable file</li>
+                <li class="ml-4 p-1">Testing</li>
+                <li class="ml-4 p-1">Documentation</li>
+                <li class="ml-4 p-1">Publish</li>
+            </ul>
+
+
+
+            <p class="py-6"></p>
+
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Research:</h3>
+            <p class="mb-2"><b>Select the Required Libraries:</b></p>
+            <ul class="list-disc list-inside">
+                <li class="ml-4 p-1"><u class="underline-offset-2">Pillow (PIL)</u> - image handling</li>
+                <li class="ml-4 p-1"><u class="underline-offset-2">PyPDF or pdf2image</u> - PDF manipulation</li>
+                <li class="ml-4 p-1"><u class="underline-offset-2">PyMuPDF</u> - handling image</li>
+                <li class="ml-4 p-1"><u class="underline-offset-2">Sortable</u> - drag and drop objects</li>
+            </ul>
+
+
+            <p class="py-6"></p>
+
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Resources:</h3>
+            <p class="mb-2">Links to different resources I used:</p>
+            <ul class="list-disc list-inside">
+                <li class="ml-4 p-1 text-sky-600"><a
+                        href="https://www.google.com/amp/s/www.geeksforgeeks.org/how-to-use-tailwind-css-with-django/amp/"
+                        target="_blank" rel="noopener noreferrer">How to use tailwind with django</li></a>
+                <li class="ml-4 p-1 text-sky-600"><a href="https://docs.djangoproject.com/en/4.2/howto/static-files/"
+                        target="_blank" rel="noopener noreferrer">Load static files in django</li></a>
+                <li class="ml-4 p-1 text-sky-600"><a
+                        href="https://django-compressor.readthedocs.io/en/latest/usage.html" target="_blank"
+                        rel="noopener noreferrer">Django compressor usage</li></a>
+                <li class="ml-4 p-1 text-sky-600"><a href="https://pypdf.readthedocs.io/en/stable/user/file-size.html"
+                        target="_blank" rel="noopener noreferrer">Example for reduce pdf size</li></a>
+                <li class="ml-4 p-1 text-sky-600"><a
+                        href="https://pypdf.readthedocs.io/en/stable/user/encryption-decryption.html" target="_blank"
+                        rel="noopener noreferrer">Encrypt and decrypt examples.</li></a>
+                <li class="ml-4 p-1 text-sky-600"><a
+                        href="https://pymupdf.readthedocs.io/en/latest/recipes-images.html#how-to-make-images-from-document-pages"
+                        target="_blank" rel="noopener noreferrer">Convert PDF to image</li></a>
+                <li class="ml-4 p-1 text-sky-600"><a href="https://www.w3schools.com/tags/att_input_accept.asp"
+                        target="_blank" rel="noopener noreferrer">Limit a certain file using accept attribute in HTML
+                </li></a>
+                <li class="ml-4 p-1 text-sky-600"><a href="https://www.w3schools.com/tags/att_input_accept.asp"
+                        target="_blank" rel="noopener noreferrer">Limit a certain file using accept attribute in HTML
+                </li></a>
+                <li class="ml-4 p-1 text-sky-600"><a
+                        href="https://www.geeksforgeeks.org/fileextensionvalidator-validate-file-extensions-in-django/"
+                        target="_blank" rel="noopener noreferrer">Add additional validation on the server using django
+                        FileExtensionValidator
+                </li></a>
+            </ul>
+
+
+            <!-- <p class="py-6"></p>
+
+                <h2 class="text-xl font-bold mb-2"></h2>
+                <p class="mb-2"></p> -->
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Design</h2>
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Sketch Prototypes:</h3>
+            <p class="mb-2">My initial sketches and drafts of how each page should look like both on mobile and PC.</p>
+            <p class="py-2"></p>
+            <img src="img/Project_PDF_PC_Draft.png" alt="Project PC Draft" class="rounded-lg w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">PC UI Draft</p>
+            <p class="py-4"></p>
+            <img src="img/Project_PDF_Mobile_Draft.png" alt="Project PC Draft" class="rounded-lg w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">Mobile UI Draft</p>
+
+
+            <p class="py-6"></p>
+
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Initial Color Scheme:</h3>
+            <p class="py-1"></p>
+            <img src="img/Project_PDF_Colors.png" alt="Color Scheme" class="rounded-lg w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">Color Scheme to Use For the Website</p>
+            <p class="py-4"></p>
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Default Colors From Tailwind:</h3>
+            <p class="py-1"></p>
+            <img src="img/Project_PDF_Colors_Tailwind.png" alt="Color Scheme" class="rounded-lg w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">Potential Colors to Use From Tailwind CSS</p>
+
+
+            <!-- Result section -->
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Final Result</h2>
+            <p class="mb-2">The website was developed in Visual Studio Code and hosted on PythonAnywhere.</p>
+            <p class="mb-2">Here is the link to the website: <a href="https://pdfoperations.pythonanywhere.com/"
+                    target="_blank" rel="noopener noreferrer" class="text-sky-600">PDF Operations</a></p>
+
+
+
+        </section>
+
+
+    </main>
+    <footer id="contact" class="bg-zinc-100 dark:bg-black dark:text-white py-8 mt-auto">
+        <section class="flex flex-col items-center justify-around">
+            <h2 class="not-italic font-semibold text-lg">Get In Touch</h2>
+            <address
+                class="flex flex-row justify-between items-center gap-1 sm:gap-4 px-6 max-w-[16rem] sm:max-w-xs mx-a">
+                <a href="https://www.linkedin.com/in/hong-nguyen-k/" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/linkedIn.png" alt="LinkedIn logo">
+                </a>
+                <a href="mailto:hong.nguyen.k54@gmail.com" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/Mail.png">
+                </a>
+                <a href="https://github.com/HongNguyen635" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/github.png" alt="GitHub logo">
+                </a>
+            </address>
+        </section>
+    </footer>
+</body>
+
+</html>
