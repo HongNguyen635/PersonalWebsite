@@ -21,7 +21,7 @@
             <div id="toggle-light-mode"
                 class="absolute rounded-full bg-sky-200 dark:bg-slate-800 w-fit p-2 mt-32 sm:mt-0 ml-[42.5%] sm:ml-8 hover:cursor-pointer">
                 <img id="sun-icon" src="img/sun.png" alt="Light Mode Image" class="block w-6 invert">
-                <img id="moon-icon" src="img/moon.png" alt="Light Mode Image" class="hidden w-6">
+                <img id="moon-icon" src="img/moon.png" alt="Dark Mode Image" class="hidden w-6">
             </div>
 
             <nav class="bg-sky-200 dark:bg-slate-900 bg-opacity-50 rounded-full shadow-lg py-4 px-6 mx-auto space-x-8 text-xl justify-center"
@@ -38,7 +38,8 @@
         <!-- Cover Page section -->
         <section class="p-8 flex flex-col justify-center items-center">
             <h1 class="text-3xl font-bold text-center mb-6 mt-4 sm:mt-0">Robotic Arm Module</h1>
-            <p class="text-lg text-center justify-center mb-8">An arm code module that is responsible for receiving and sending commands to move the robotic arm.</p>
+            <p class="text-lg text-center justify-center mb-8">An arm code module that is responsible for receiving and
+                sending commands to move the robotic arm.</p>
             <img src="img/ProjectArm_Code/Arm_CoverImage.png" alt="Arm Code Cover Page" class="rounded-lg">
         </section>
 
@@ -59,10 +60,14 @@
 
             <h2 class="text-xl font-bold mb-2">Overview</h2>
             <p class="mb-2">
-                The arm code is responsible for moving the arm given a specific control command (from a controller). This code is integrated with code from other modules within the same TrickFire URC rover codebase, specifically RobotInfo, RobotInterface, and Mission Control.
+                The arm code is responsible for moving the arm given a specific control command (from a controller).
+                This code is integrated with code from other modules within the same TrickFire URC rover codebase,
+                specifically RobotInfo, RobotInterface, and Mission Control.
             </p>
             <p class="mb-2">
-                The TrickFire Software repository can be found here: <a href="https://github.com/TrickfireRobotics/urc-2023" target="_blank" rel="noopener noreferrer" class="text-sky-600">Trickfire Robotics University Rover Challenge Software.</a>
+                The TrickFire Software repository can be found here: <a
+                    href="https://github.com/TrickfireRobotics/urc-2023" target="_blank" rel="noopener noreferrer"
+                    class="text-sky-600">Trickfire Robotics University Rover Challenge Software.</a>
             </p>
 
 
@@ -71,7 +76,8 @@
             <h2 class="text-xl font-bold mb-2">Goals</h2>
             <ul class="list-disc">
                 <li class="ml-4 p-1">Write code that integrates with different modules within the same codebase.</li>
-                <li class="ml-4 p-1">Perform accurate and precise calculations to control the arm’s motors’ positions and orientations given a certain controller input.</li>
+                <li class="ml-4 p-1">Perform accurate and precise calculations to control the arm’s motors’ positions
+                    and orientations given a certain controller input.</li>
             </ul>
 
 
@@ -79,15 +85,20 @@
 
             <h2 class="text-xl font-bold mb-2">Planning</h2>
             <p class="mb-6">
-                Part of the code for moving the arm was written by a previous team member who already graduated. However, the former program is a standalone program, independent of the TrickFire codebase. Therefore, I need to rewrite the code into a program that uses ROS2 publishers and subscribers model, so that it can interact with the other parts of TrickFire code modules.
+                Part of the code for moving the arm was written by a previous team member who already graduated.
+                However, the former program is a standalone program, independent of the TrickFire codebase. Therefore, I
+                need to rewrite the code into a program that uses ROS2 publishers and subscribers model, so that it can
+                interact with the other parts of TrickFire code modules.
             </p>
 
             <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Tasks Checklist:</h3>
 
             <ul class="list-decimal list-inside">
                 <li class="ml-4 p-1">Understand the code written by the previous member.</li>
-                <li class="ml-4 p-1">Map the controller’s joysticks and buttons to specific controlling topics (move, rotate, enable, etc.).</li>
-                <li class="ml-4 p-1">Design logic for calculating the end effector position given the input from a control.</li>
+                <li class="ml-4 p-1">Map the controller’s joysticks and buttons to specific controlling topics (move,
+                    rotate, enable, etc.).</li>
+                <li class="ml-4 p-1">Design logic for calculating the end effector position given the input from a
+                    control.</li>
                 <li class="ml-4 p-1">Test with the current arm URDF file.</li>
                 <li class="ml-4 p-1">Code Documentation</li>
             </ul>
@@ -102,8 +113,9 @@
                 <li class="ml-4 p-1"><u class="underline-offset-2"><a href="https://github.com/Phylliade/ikpy"
                             target="_blank" rel="noopener noreferrer" class="text-sky-600">Ikpy</a></u> - Compute
                     forward and inverse kinematics algorithms.</li>
-                <li class="ml-4 p-1"><u class="underline-offset-2"><a href="https://docs.ros.org/en/humble/index.html" target="_blank"
-                            rel="noopener noreferrer" class="text-sky-600">ROS2</a></u> - Several built-in libraries were used to create a node, publishers, subscribers, and message types.</li>
+                <li class="ml-4 p-1"><u class="underline-offset-2"><a href="https://docs.ros.org/en/humble/index.html"
+                            target="_blank" rel="noopener noreferrer" class="text-sky-600">ROS2</a></u> - Several
+                    built-in libraries were used to create a node, publishers, subscribers, and message types.</li>
             </ul>
 
 
@@ -111,20 +123,25 @@
 
             <h2 class="text-xl font-bold mb-2">Class Design</h2>
             <p class="mb-2">
-                Below is the overall diagram (rough sketch) of how the arm should interact with the other parts of the code base.
+                Below is the overall diagram (rough sketch) of how the arm should interact with the other parts of the
+                code base.
             </p>
 
             <p class="py-2"></p>
-            <img src="img/ProjectArm_Code/Arm_CodeOverview.png" alt="Arm Code Overview" class="rounded-lg w-4/5 self-center">
+            <img src="img/ProjectArm_Code/Arm_CodeOverview.png" alt="Arm Code Overview"
+                class="rounded-lg w-4/5 self-center">
             <p class="py-2 text-center italic text-sm">Rough Diagram of the Arm Node Class</p>
 
             <p class="py-6"></p>
 
             <p class="mb-2">
-                Since the arm is a ROS node, it will subscribe to the control topic published by the Mission Control class. The arm will then use the current position and orientation of the motors and the target to compute the new position and orientation.
+                Since the arm is a ROS node, it will subscribe to the control topic published by the Mission Control
+                class. The arm will then use the current position and orientation of the motors and the target to
+                compute the new position and orientation.
             </p>
             <p class="mb-2">
-                The output will be a form of the matrix. So, the class methods will then process that information to send commands to each individual motor.
+                The output will be a form of the matrix. So, the class methods will then process that information to
+                send commands to each individual motor.
             </p>
 
             <p class="py-6"></p>
@@ -134,7 +151,8 @@
                 The next part is to map each controller input with a specific topic.
             </p>
             <p class="py-2"></p>
-            <img src="img/ProjectArm_Code/Arm_Controller_Map.png" alt="Arm Controller Map" class="rounded-lg w-4/5 self-center">
+            <img src="img/ProjectArm_Code/Arm_Controller_Map.png" alt="Arm Controller Map"
+                class="rounded-lg w-4/5 self-center">
             <p class="py-2 text-center italic text-sm">Controller Input Mapping</p>
 
 
@@ -143,7 +161,8 @@
 
             <h2 class="text-xl font-bold mb-2">Outcomes</h2>
             <p class="mb-2">
-                Currently, the arm code is finished. However, I am unable to test the code and show the result of the arm moving because other teams have not completed the section of their code yet.
+                Currently, the arm code is finished. However, I am unable to test the code and show the result of the
+                arm moving because other teams have not completed the section of their code yet.
             </p>
 
             <p class="py-6"></p>

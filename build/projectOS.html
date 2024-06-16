@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hong Nguyen Personal Portfolio Website">
+    <title>Hong Nguyen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/" type="image/x-icon">
+    <script type="module" src="js/main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-zinc-50 dark:bg-black dark:text-sky-200 overflow-x-hidden">
+    <header class="w-screen sticky top-0 z-1">
+        <section class="py-6 max-w-4xl mx-auto flex justify-between items-center">
+            <div id="toggle-light-mode"
+                class="absolute rounded-full bg-sky-200 dark:bg-slate-800 w-fit p-2 mt-32 sm:mt-0 ml-[42.5%] sm:ml-8 hover:cursor-pointer">
+                <img id="sun-icon" src="img/sun.png" alt="Light Mode Image" class="block w-6 invert">
+                <img id="moon-icon" src="img/moon.png" alt="Dark Mode Image" class="hidden w-6">
+            </div>
+
+            <nav class="bg-sky-200 dark:bg-slate-900 bg-opacity-50 rounded-full shadow-lg py-4 px-6 mx-auto space-x-8 text-xl justify-center"
+                aria-label="main">
+                <a href="index.html" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Home</a>
+                <a href="#contact" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Contact</a>
+            </nav>
+        </section>
+
+
+    </header>
+
+    <main class="max-w-4xl mx-auto text-black dark:text-white">
+        <!-- Cover Page section -->
+        <section class="p-8 flex flex-col justify-center items-center">
+            <h1 class="text-3xl font-bold text-center mb-6 mt-4 sm:mt-0">Single-Level File System</h1>
+            <p class="text-lg text-center justify-center mb-8">Operating system course final project. A single-level
+                File System for the ThreadOS (a faculty-developed OS to teach students OS concepts).</p>
+            <img src="img/Project_FileSystem/OS_Cover.jpg" alt="OS Cover Page" class="rounded-lg w-4/5">
+        </section>
+
+        <!-- Process section -->
+        <section class="p-8 flex flex-col">
+            <h2 class="text-xl font-bold mb-2">Timeline</h2>
+            <p class="mb-2">May 2024 &#8211; June 2024</p>
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Implementation Details</h2>
+            <p class="mb-2"><b>Programming Language:</b> Java.</p>
+            <p class="mb-2"><b>Key Concepts:</b> Multithreading, Inode, Superblock, File Descriptors Table, File System.
+            </p>
+            <p class="mb-2"><b>Associated with:</b> University of Washington (Bothell)</p>
+
+            <p class="py-6"></p>
+
+            <!-- Box for warning section -->
+            <div class="bg-red-400 dark:bg-red-900 p-4 rounded-2xl">
+                <h3 class="text-lg font-bold mb-2">Warning:</h3>
+                <p class="mb-2">
+                    If you are currently a student in CSS 430 and are reading this page, please <b>PROCEED NO
+                        FURTHER</b>. It
+                    is considered academic dishonesty to copy/modify code from previous students for your project.
+                </p>
+                <p class="mb-2">
+                    I showed this project with the intention to showcase my work and what I designed for my final
+                    project. I will not be responsible for your actions.
+                </p>
+            </div>
+
+            <!-- Details about project -->
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Specification</h2>
+            <p class="mb-2">
+                Design a Single Level File System for the ThreadOS. The File System must support format, open, read,
+                write, seek, close, delete, and fsize. Since Single Level File System is the most basic file system, it
+                only has a root directory that manages all the files under it. This introduces an advantage for easy
+                implementation. However, the limitation is that each file name must be unique and no sub-directory is
+                allowed.
+            </p>
+
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Big Picture</h2>
+            <p class="mb-2">
+                Below is the overall picture of the File System. Starting with the System calls at the highest level.
+                System calls generate an interrupt to the kernel. The kernel then looks into the TCB to get the file
+                descriptor. After that, the kernel calls the respective method from the file system to perform the
+                needed operation. The file system contains a root directory, the file table (the file descriptor table),
+                and the superblock. The root directory contains inodes, which store the information of each file.
+                Finally, the lowest level is the direct raw read and write to the disk.
+            </p>
+
+            <p class="py-2"></p>
+
+            <img src="img/Project_FileSystem/Overall_Picture.png" alt="File System Overview"
+                class="rounded-lg w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">File System Big Picture</p>
+
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">File System Components Implementation</h2>
+            <p class="mb-6">
+                Details on how each component is implemented are included in the project report below:
+            </p>
+
+            <details class="mb-6">
+                <summary class="text-sky-600 p-2 hover:cursor-pointer hover:underline">Final Project Report</summary>
+                <p class="py-2"></p>
+                <object class="min-h-screen" data="img/Project_FileSystem/Final Project Report.pdf"
+                    type="application/pdf" width="100%" height="100%">
+                </object>
+            </details>
+
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Inode</h3>
+
+            <p class="mb-6">
+                Each inode describes a file. The inode stores the length of the file, keeps track of how many file table
+                entries are pointing to this, a flag to indicate what/how the file is being used, 11 direct pointers,
+                and 1 indirect pointer. Figure 5 shows a visual of the Inode.
+            </p>
+
+            <img src="img/Project_FileSystem/Inode.png" alt="Inode Structure" class="rounded-lg w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">Inode Structure</p>
+
+
+            <p class="py-6"></p>
+
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">File System Read Method:</h3>
+
+            <p class="mb-6">
+                Read is one of the two major operations of the file system. This method is complicated, and I describe
+                the detailed algorithm in the source code. Figure 15 illustrates the general approach (language
+                independent) to read a file given a file table entry and the buffer that the information will be read
+                into.
+            </p>
+
+            <img src="img/Project_FileSystem/FS_Read.png" alt="Read File Diagram" class="rounded-lg w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">Process of Reading a File</p>
+
+
+            <p class="py-6"></p>
+
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">File System Write Method:</h3>
+
+            <p class="mb-6">
+                Write is the second major operation of the file system. Part of the general approach is similar to
+                reading, however, writing is more complicated than reading in which we need to allocate new blocks if
+                the information we have written is longer than the file's length. Figure 16 illustrates this process.
+            </p>
+
+            <img src="img/Project_FileSystem/FS_Write.png" alt="Write File Diagram"
+                class="rounded-lg w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">Process of Writing to a File</p>
+
+            <!-- Source code -->
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">File System Source Code:</h2>
+            <p class="mb-2">I only include files that I modified: <a
+                    href="https://github.com/HongNguyen635/OS-Project/tree/main" target="_blank"
+                    rel="noopener noreferrer" class="text-sky-600">File System GitHub</a></p>
+
+        </section>
+
+        <!-- Next project link -->
+        <div class="flex justify-end px-6">
+            <a href="projectPDF.html" class="text-sky-600 p-2">
+                Next Project &#8594;
+            </a>
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+            </span>
+
+        </div>
+
+
+
+
+    </main>
+    <footer id="contact" class="bg-zinc-100 dark:bg-black dark:text-white py-8 mt-auto">
+        <section class="flex flex-col items-center justify-around">
+            <h2 class="not-italic font-semibold text-lg">Get In Touch</h2>
+            <address
+                class="flex flex-row justify-between items-center gap-1 sm:gap-4 px-6 max-w-[16rem] sm:max-w-xs mx-a">
+                <a href="https://www.linkedin.com/in/hong-nguyen-k/" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/linkedIn.png" alt="LinkedIn logo">
+                </a>
+                <a href="mailto:hong.nguyen.k54@gmail.com" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/Mail.png">
+                </a>
+                <a href="https://github.com/HongNguyen635" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/github.png" alt="GitHub logo">
+                </a>
+            </address>
+        </section>
+    </footer>
+</body>
+
+</html>
