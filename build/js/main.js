@@ -1,6 +1,6 @@
 const initApp = () => {
-  // set the default to dark theme
-  document.documentElement.classList.add("dark");
+  // set the default to light theme
+  // document.documentElement.classList.add("light");
 
   // toggle the light and dark mode
   const lightModeToggle = document.getElementById("toggle-light-mode");
