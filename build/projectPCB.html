@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hong Nguyen Personal Portfolio Website">
+    <title>Hong Nguyen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/" type="image/x-icon">
+    <script type="module" src="js/main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-zinc-50 dark:bg-black dark:text-sky-200 overflow-x-hidden">
+    <header class="w-screen sticky top-0 z-1">
+        <section class="py-6 max-w-4xl mx-auto flex justify-between items-center">
+            <div id="toggle-light-mode"
+                class="absolute rounded-full bg-sky-200 dark:bg-slate-800 w-fit p-2 mt-32 sm:mt-0 ml-[42.5%] sm:ml-8 hover:cursor-pointer">
+                <img id="sun-icon" src="img/sun.png" alt="Light Mode Image" class="hidden w-6 invert">
+                <img id="moon-icon" src="img/moon.png" alt="Light Mode Image" class="block w-6">
+            </div>
+
+            <nav class="bg-sky-200 dark:bg-slate-900 bg-opacity-50 rounded-full shadow-lg py-4 px-6 mx-auto space-x-8 text-xl justify-center"
+                aria-label="main">
+                <a href="index.html" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Home</a>
+                <a href="#contact" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Contact</a>
+            </nav>
+        </section>
+
+
+    </header>
+
+    <main class="max-w-4xl mx-auto bg-zinc-50 dark:bg-black text-black dark:text-white">
+        <!-- Cover Page section -->
+        <section class="p-8 flex flex-col justify-center items-center">
+            <h1 class="text-3xl font-bold text-center mb-6 mt-4 sm:mt-0">Motherboard PCB</h1>
+            <p class="text-lg text-center justify-center mb-8">Designed the buck converter and connectors module for the
+                motherboard PCB.</p>
+            <img src="img/Project_PCB/Buck_Cover.png" alt="PCB Cover" class="rounded-lg">
+        </section>
+
+        <!-- Process section -->
+        <section class="p-8 flex flex-col">
+            <h2 class="text-xl font-bold mb-2">Timeline</h2>
+            <p class="mb-2">March 2024 &#8211; Now</p>
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Implementation Details</h2>
+            <p class="mb-2"><b>Tool:</b> Altium and PSpice.</p>
+            <p class="mb-2"><b>Overview: </b> The motherboard is divided into many different parts: buck converter,
+                control, connectors, LED driver, and GPS module. I’m responsible for the buck converter and connectors
+                module.</p>
+            <p class="mb-2"><b>Associated with:</b> TrickFire Robotics.</p>
+
+            <p class="mt-2"><b>2 parts:</b></p>
+            <ul class="list-decimal list-inside">
+                <li class="ml-4 p-1">
+                    <a href="#buck" class="text-sky-600 p-2">
+                        Buck converter:</a>step down from 12V to 5V.
+                </li>
+                <li class="ml-4 p-1">
+                    <a href="#connector" class="text-sky-600 p-2">
+                        Connector module:</a>connect the rover's servos and stepper motors to the motherboard.
+                </li>
+            </ul>
+
+
+
+            <!-- Buck detail discussion -->
+            <section id="buck" class="flex flex-col scroll-mt-10">
+                <p class="py-6"></p>
+
+                <h2 class="text-xl font-bold mb-2">1. Buck Converter</h2>
+                <p class="mb-2"><b>Teammate:</b> Christian F.</p>
+
+                <p class="py-2"></p>
+
+                <h2 class="text-xl font-bold mb-2">Goals</h2>
+                <p class="mb-2">Step down 12V input to 5V with 10A current output to drive the motors and supply power
+                    to different parts of the rover.</p>
+                <p class="mb-2">The result is a PCB that is <b>separated</b> from the motherboard to test first before
+                    combining it together with the other parts of the motherboard.</p>
+
+                <p class="py-6"></p>
+
+                <h2 class="text-xl font-bold mb-2">Process</h2>
+                <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Tasks Checklist:</h3>
+
+                <ul class="list-decimal list-inside">
+                    <li class="ml-4 p-1">Research components and buck converter overall configuration.</li>
+                    <li class="ml-4 p-1">Design a general schematic and compare it with each other.</li>
+                    <li class="ml-4 p-1">Simulate in PSpice for TI.</li>
+                    <li class="ml-4 p-1">Feedback, improve, and finalize the schematic.</li>
+                    <li class="ml-4 p-1">Components selection (calculate and select components that fit with design
+                        criteria).</li>
+                    <li class="ml-4 p-1">PCB first draft.</li>
+                    <li class="ml-4 p-1">Feedback and improvement.</li>
+                    <li class="ml-4 p-1">PCB second draft.</li>
+                    <li class="ml-4 p-1">Feedback and improvement.</li>
+                    <li class="ml-4 p-1">PCB final draft.</li>
+                    <li class="ml-4 p-1">Create a test board.</li>
+                    <li class="ml-4 p-1">Send files to the manufacturer.</li>
+                    <li class="ml-4 p-1">Assemble components.</li>
+                    <li class="ml-4 p-1">Test the new PCB.</li>
+                </ul>
+
+
+                <p class="py-6"></p>
+
+                <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Schematic:</h3>
+                <p class="mb-2">Below is the schematic of the buck converter.</p>
+                <p class="py-2"></p>
+                <img src="img/Project_PCB/Buck_Schematic.png" alt="Buck Schematic" class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">Buck Converter Schematic</p>
+
+                <p class="py-6"></p>
+
+                <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">PCB:</h3>
+                <p class="mb-2">The PCB has 4 layers:</p>
+                <ul class="list-decimal list-inside">
+                    <li class="ml-4 p-1">Signal (top layer)</li>
+                    <li class="ml-4 p-1">Ground</li>
+                    <li class="ml-4 p-1">Input/output signal</li>
+                    <li class="ml-4 p-1">Other signal (bottom layer, reserved for other parts of the motherboard).</li>
+                </ul>
+                <p class="my-2">Below is a picture of each layer:</p>
+
+                <p class="py-2"></p>
+
+                <img src="img/Project_PCB/TopLayer.png" alt="PCB Top Layer" class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">Top Layer (Signal/GND)</p>
+
+                <p class="py-2"></p>
+
+                <img src="img/Project_PCB/GNDLayer.png" alt="GND Layer" class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">GND Layer</p>
+
+                <p class="py-2"></p>
+
+                <img src="img/Project_PCB/inoutLayer.png" alt="3rd Layer" class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">Input and Output (Signal/GND)</p>
+
+                <p class="py-2"></p>
+
+                <img src="img/Project_PCB/BottomLayer.png" alt="Bottom Layer" class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">Bottom Layer (Signal/GND)</p>
+
+                <img src="img/Project_PCB/Buck_Cover.png" alt="PCB Board View" class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">3D View</p>
+
+
+                <!-- Result section -->
+                <p class="py-6"></p>
+
+                <h2 class="text-xl font-bold mb-2">Outcomes:</h2>
+                <p class="mb-2">Currently, the PCB is waiting for manufacture. The complete physical board image and
+                    testing result will be updated once the PCB is done.</p>
+
+            </section>
+
+
+            <!-- Connector Section -->
+            <section id="connector" class="flex flex-col scroll-mt-10">
+                <p class="py-6"></p>
+
+                <h2 class="text-xl font-bold mb-2">2. Connector Module</h2>
+                <p class="py-2"></p>
+                <h2 class="text-xl font-bold mb-2">Goals</h2>
+                <p class="mb-2">This part of the PCB involves implementing the A4988 stepper motor drivers and ensuring
+                    that each Servo and Stepper motor receives the correct signals and power. Each A4988 driver will be
+                    attached to the board using female headers so that faulty modules can be easily swapped.
+                    Additionally, I need to choose connectors so that the servos and stepper motors can be easily and
+                    securely attached to the board.</p>
+
+                <p class="py-6"></p>
+
+                <h2 class="text-xl font-bold mb-2">Process</h2>
+                <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Tasks Checklist:</h3>
+
+                <ul class="list-decimal list-inside">
+                    <li class="ml-4 p-1">Research connectors type for the stepper motor drivers, motors, and servos.
+                    </li>
+                    <li class="ml-4 p-1">Connectors selection: ensure proper dimensions and ratings.</li>
+                    <li class="ml-4 p-1">Design a general connector schematic.</li>
+                    <li class="ml-4 p-1">Feedback, improve, and finalize the schematic.</li>
+                    <li class="ml-4 p-1">PCB first draft.</li>
+                    <li class="ml-4 p-1">Feedback and improvement.</li>
+                    <li class="ml-4 p-1">PCB second draft.</li>
+                    <li class="ml-4 p-1">Feedback and improvement.</li>
+                    <li class="ml-4 p-1">PCB final draft.</li>
+                    <li class="ml-4 p-1">Create a test board.</li>
+                    <li class="ml-4 p-1">Send files to the manufacturer.</li>
+                    <li class="ml-4 p-1">Assemble components.</li>
+                    <li class="ml-4 p-1">Test the new PCB.</li>
+                </ul>
+
+
+                <p class="py-6"></p>
+
+                <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Schematic:</h3>
+                <p class="mb-2">Below is the schematic of the connector module.</p>
+                <p class="py-2"></p>
+                <img src="img/Project_PCB/Connector_Schematic.png" alt="Connectors Schematic" class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">Connectors Schematic</p>
+
+                <p class="py-6"></p>
+
+                <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">PCB:</h3>
+                <p class="mb-2">Unlike the buck converter, this connector part is implemented together with other parts
+                    of the motherboard to test because it cannot work as a standalone component.</p>
+                <p class="mb-2">The other parts are currently in development and the final result will be updated here.
+                </p>
+
+            </section>
+
+        </section>
+
+        <!-- Next project link -->
+        <div class="flex justify-end px-6">
+            <a href="projectOS.html" class="text-sky-600 p-2">
+                Next Project &#8594;
+            </a>
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+            </span>
+
+        </div>
+
+
+    </main>
+    <footer id="contact" class="bg-zinc-100 dark:bg-black dark:text-white py-8 mt-auto">
+        <section class="flex flex-col items-center justify-around">
+            <h2 class="not-italic font-semibold text-lg">Get In Touch</h2>
+            <address
+                class="flex flex-row justify-between items-center gap-1 sm:gap-4 px-6 max-w-[16rem] sm:max-w-xs mx-a">
+                <a href="https://www.linkedin.com/in/hong-nguyen-k/" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/linkedIn.png" alt="LinkedIn logo">
+                </a>
+                <a href="mailto:hong.nguyen.k54@gmail.com" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/Mail.png">
+                </a>
+                <a href="https://github.com/HongNguyen635" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/github.png" alt="GitHub logo">
+                </a>
+            </address>
+        </section>
+    </footer>
+</body>
+
+</html>
