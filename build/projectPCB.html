@@ -38,15 +38,16 @@
         <!-- Cover Page section -->
         <section class="p-8 flex flex-col justify-center items-center">
             <h1 class="text-3xl font-bold text-center mb-6 mt-4 sm:mt-0">Motherboard PCB</h1>
-            <p class="text-lg text-center justify-center mb-8">Designed the buck converter and connectors module for the
-                motherboard PCB.</p>
-            <img src="img/Project_PCB/Buck_Cover.png" alt="PCB Cover" class="rounded-lg">
+            <p class="text-lg text-center justify-center mb-8">
+                Designed the buck converter and connectors module, and routed the motherboard PCB.
+            </p>
+            <img src="img/Project_PCB/PCB_Cover.png" alt="PCB Cover" class="rounded-lg">
         </section>
 
         <!-- Process section -->
         <section class="p-8 flex flex-col">
             <h2 class="text-xl font-bold mb-2">Timeline</h2>
-            <p class="mb-2">March 2024 &#8211; Now</p>
+            <p class="mb-2">March 2024 &#8211; September 2024</p>
 
             <p class="py-6"></p>
 
@@ -57,7 +58,7 @@
                 module.</p>
             <p class="mb-2"><b>Associated with:</b> TrickFire Robotics.</p>
 
-            <p class="mt-2"><b>2 parts:</b></p>
+            <p class="mt-2"><b>3 parts:</b></p>
             <ul class="list-decimal list-inside">
                 <li class="ml-4 p-1">
                     <a href="#buck" class="text-sky-600 p-2">
@@ -66,6 +67,10 @@
                 <li class="ml-4 p-1">
                     <a href="#connector" class="text-sky-600 p-2">
                         Connector module:</a>connect the rover's servos and stepper motors to the motherboard.
+                </li>
+                <li class="ml-4 p-1">
+                    <a href="#motherboard" class="text-sky-600 p-2">
+                        The motherboard:</a>I'm responsible for component placement and routing.
                 </li>
             </ul>
 
@@ -132,25 +137,33 @@
 
                 <p class="py-2"></p>
 
-                <img src="img/Project_PCB/TopLayer.png" alt="PCB Top Layer" class="w-4/5 self-center">
+                <img src="img/Project_PCB/Buck_TopAndSilk.png" alt="Buck PCB Top Layer and Silkscreen"
+                    class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">Top Layer and Top Silkscreen</p>
+
+                <p class="py-2"></p>
+
+                <img src="img/Project_PCB/Buck_TopLayer.png" alt="Buck PCB Top Layer" class="w-4/5 self-center">
                 <p class="py-2 text-center italic text-sm">Top Layer (Signal/GND)</p>
 
                 <p class="py-2"></p>
 
-                <img src="img/Project_PCB/GNDLayer.png" alt="GND Layer" class="w-4/5 self-center">
+                <img src="img/Project_PCB/Buck_GNDLayer.png" alt="Buck GND Layer" class="w-4/5 self-center">
                 <p class="py-2 text-center italic text-sm">GND Layer</p>
 
                 <p class="py-2"></p>
 
-                <img src="img/Project_PCB/inoutLayer.png" alt="3rd Layer" class="w-4/5 self-center">
+                <img src="img/Project_PCB/Buck_InOutLayer.png" alt="Buck 3rd Layer" class="w-4/5 self-center">
                 <p class="py-2 text-center italic text-sm">Input and Output (Signal/GND)</p>
 
                 <p class="py-2"></p>
 
-                <img src="img/Project_PCB/BottomLayer.png" alt="Bottom Layer" class="w-4/5 self-center">
+                <img src="img/Project_PCB/Buck_BottomLayer.png" alt="Buck Bottom Layer" class="w-4/5 self-center">
                 <p class="py-2 text-center italic text-sm">Bottom Layer (Signal/GND)</p>
 
-                <img src="img/Project_PCB/Buck_Cover.png" alt="PCB Board View" class="w-4/5 self-center">
+                <p class="py-2"></p>
+
+                <img src="img/Project_PCB/Buck_3D.png" alt="Buck PCB Board View" class="w-4/5 self-center">
                 <p class="py-2 text-center italic text-sm">3D View</p>
 
 
@@ -215,6 +228,91 @@
                     of the motherboard to test because it cannot work as a standalone component.</p>
                 <p class="mb-2">The other parts are currently in development and the final result will be updated here.
                 </p>
+
+            </section>
+
+
+            <!-- Motherboard Section -->
+            <section id="motherboard" class="flex flex-col scroll-mt-10">
+                <p class="py-6"></p>
+
+                <h2 class="text-xl font-bold mb-2">3. Motherboard</h2>
+                <p class="py-2"></p>
+                <h2 class="text-xl font-bold mb-2">My tasks:</h2>
+                <p class="mb-2">Place components and route the PCB.</p>
+
+                <p class="py-6"></p>
+
+                <h2 class="text-xl font-bold mb-2">My approach:</h2>
+
+                <p class="mb-2">There are 2 main power areas on the board: 12 V and 5V.</p>
+                <p class="mb-2">I organized the components so that 12 V is on the left, and the 5 V area is on the
+                    right. That way, the power trace of each component is as short and as convenient as possible to its
+                    respective power source.
+                </p>
+
+                <p class="py-6"></p>
+
+                <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Schematic:</h3>
+                <p class="mb-2">Below is the high-level schematic of the motherboard.</p>
+                <p class="py-2"></p>
+                <img src="img/Project_PCB/Motherboard_Schematic.png" alt="Motherboard Schematic"
+                    class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">Motherboard High-Level Schematic</p>
+
+                <p class="py-6"></p>
+
+                <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">PCB:</h3>
+                <p class="mb-2">The PCB has 4 layers:</p>
+                <ul class="list-decimal list-inside">
+                    <li class="ml-4 p-1">Signal (top layer)</li>
+                    <li class="ml-4 p-1">Ground</li>
+                    <li class="ml-4 p-1">Power</li>
+                    <li class="ml-4 p-1">Signal</li>
+                </ul>
+                <p class="my-2">Below is a picture of each layer:</p>
+
+                <p class="py-2"></p>
+
+                <img src="img/Project_PCB/Motherboard_TopAndSilk.png" alt="Motherboard PCB Top Layer and Silkscreen"
+                    class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">Top Layer and Top Silkscreen</p>
+
+                <p class="py-2"></p>
+
+                <img src="img/Project_PCB/Motherboard_TopLayer.png" alt="Motherboard PCB Top Layer"
+                    class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">Top Layer (Signal/GND)</p>
+
+                <p class="py-2"></p>
+
+                <img src="img/Project_PCB/Motherboard_GND.png" alt="Motherboard GND Layer" class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">GND Layer</p>
+
+                <p class="py-2"></p>
+
+                <img src="img/Project_PCB/Motherboard_Power.png" alt="Motherboard 3rd Layer" class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">Power/GND Layer</p>
+
+                <p class="py-2"></p>
+
+                <img src="img/Project_PCB/Motherboard_BottomLayer.png" alt="Motherboard Bottom Layer"
+                    class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">Bottom Layer (Signal/GND)</p>
+
+                <p class="py-2"></p>
+
+                <img src="img/Project_PCB/Motherboard_3D.png" alt="Motherboard PCB Board View"
+                    class="w-4/5 self-center">
+                <p class="py-2 text-center italic text-sm">3D View</p>
+
+
+                <!-- Result section -->
+                <p class="py-6"></p>
+
+                <h2 class="text-xl font-bold mb-2">Outcomes:</h2>
+                <p class="mb-2">Currently, the PCB is waiting for manufacture. The complete physical board image and
+                    testing result will be updated once the PCB is done.</p>
 
             </section>
 
