@@ -37,9 +37,9 @@
     <main class="max-w-4xl mx-auto bg-zinc-50 dark:bg-black text-black dark:text-white">
         <!-- Cover Page section -->
         <section class="p-8 flex flex-col justify-center items-center">
-            <h1 class="text-3xl font-bold text-center mb-6 mt-4 sm:mt-0">Motherboard PCB</h1>
+            <h1 class="text-3xl font-bold text-center mb-6 mt-4 sm:mt-0">Rover Main Control PCB</h1>
             <p class="text-lg text-center justify-center mb-8">
-                Designed the buck converter and connectors module, and routed the motherboard PCB.
+                Designed the buck converter and connectors module, and routed the Main Control PCB.
             </p>
             <img src="img/Project_PCB/PCB_Cover.png" alt="PCB Cover" class="rounded-lg">
         </section>
@@ -53,7 +53,8 @@
 
             <h2 class="text-xl font-bold mb-2">Implementation Details</h2>
             <p class="mb-2"><b>Tool:</b> Altium and PSpice.</p>
-            <p class="mb-2"><b>Overview: </b> The motherboard is divided into many different parts: buck converter,
+            <p class="mb-2"><b>Overview: </b> The main control board is divided into many different parts: buck
+                converter,
                 control, connectors, LED driver, and GPS module. I’m responsible for the buck converter and connectors
                 module.</p>
             <p class="mb-2"><b>Associated with:</b> TrickFire Robotics.</p>
@@ -66,11 +67,11 @@
                 </li>
                 <li class="ml-4 p-1">
                     <a href="#connector" class="text-sky-600 p-2">
-                        Connector module:</a>connect the rover's servos and stepper motors to the motherboard.
+                        Connector module:</a>connect the rover's servos and stepper motors to the main control board.
                 </li>
                 <li class="ml-4 p-1">
                     <a href="#motherboard" class="text-sky-600 p-2">
-                        The motherboard:</a>I'm responsible for component placement and routing.
+                        The main control board:</a>I'm responsible for component placement and routing.
                 </li>
             </ul>
 
@@ -88,8 +89,9 @@
                 <h2 class="text-xl font-bold mb-2">Goals</h2>
                 <p class="mb-2">Step down 12V input to 5V with 10A current output to drive the motors and supply power
                     to different parts of the rover.</p>
-                <p class="mb-2">The result is a PCB that is <b>separated</b> from the motherboard to test first before
-                    combining it together with the other parts of the motherboard.</p>
+                <p class="mb-2">The result is a PCB that is <b>separated</b> from the main control board to test first
+                    before
+                    combining it together with the other parts of the main control board.</p>
 
                 <p class="py-6"></p>
 
@@ -131,7 +133,8 @@
                     <li class="ml-4 p-1">Signal (top layer)</li>
                     <li class="ml-4 p-1">Ground</li>
                     <li class="ml-4 p-1">Input/output signal</li>
-                    <li class="ml-4 p-1">Other signal (bottom layer, reserved for other parts of the motherboard).</li>
+                    <li class="ml-4 p-1">Other signal (bottom layer, reserved for other parts of the main control
+                        board).</li>
                 </ul>
                 <p class="my-2">Below is a picture of each layer:</p>
 
@@ -171,8 +174,14 @@
                 <p class="py-6"></p>
 
                 <h2 class="text-xl font-bold mb-2">Outcomes:</h2>
-                <p class="mb-2">Currently, the PCB is waiting for manufacture. The complete physical board image and
-                    testing result will be updated once the PCB is done.</p>
+
+                <p class="mb-2">Below is the picture of the Buck Comverter PCB fully
+                    assembled and tested.</p>
+
+                <p class="py-1"></p>
+
+                <img src="img/Project_PCB/Buck_PCB.jpg" alt="Buck PCB" class="rounded-lg w-2/5 self-center">
+                <p class="py-2 text-center italic text-sm">Buck Converter PCB</p>
 
             </section>
 
@@ -225,7 +234,7 @@
 
                 <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">PCB:</h3>
                 <p class="mb-2">Unlike the buck converter, this connector part is implemented together with other parts
-                    of the motherboard to test because it cannot work as a standalone component.</p>
+                    of the main control board to test because it cannot work as a standalone component.</p>
                 <p class="mb-2">The other parts are currently in development and the final result will be updated here.
                 </p>
 
@@ -236,7 +245,7 @@
             <section id="motherboard" class="flex flex-col scroll-mt-10">
                 <p class="py-6"></p>
 
-                <h2 class="text-xl font-bold mb-2">3. Motherboard</h2>
+                <h2 class="text-xl font-bold mb-2">3. Main Control PCB</h2>
                 <p class="py-2"></p>
                 <h2 class="text-xl font-bold mb-2">My tasks:</h2>
                 <p class="mb-2">Place components and route the PCB.</p>
@@ -254,11 +263,11 @@
                 <p class="py-6"></p>
 
                 <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Schematic:</h3>
-                <p class="mb-2">Below is the high-level schematic of the motherboard.</p>
+                <p class="mb-2">Below is the high-level schematic of the main control board.</p>
                 <p class="py-2"></p>
-                <img src="img/Project_PCB/Motherboard_Schematic.png" alt="Motherboard Schematic"
+                <img src="img/Project_PCB/Motherboard_Schematic.png" alt="main control board Schematic"
                     class="w-4/5 self-center">
-                <p class="py-2 text-center italic text-sm">Motherboard High-Level Schematic</p>
+                <p class="py-2 text-center italic text-sm">Main Control Board High-Level Schematic</p>
 
                 <p class="py-6"></p>
 
@@ -274,13 +283,13 @@
 
                 <p class="py-2"></p>
 
-                <img src="img/Project_PCB/Motherboard_TopAndSilk.png" alt="Motherboard PCB Top Layer and Silkscreen"
-                    class="w-4/5 self-center">
+                <img src="img/Project_PCB/Motherboard_TopAndSilk.png"
+                    alt="Rover Main Control PCB Top Layer and Silkscreen" class="w-4/5 self-center">
                 <p class="py-2 text-center italic text-sm">Top Layer and Top Silkscreen</p>
 
                 <p class="py-2"></p>
 
-                <img src="img/Project_PCB/Motherboard_TopLayer.png" alt="Motherboard PCB Top Layer"
+                <img src="img/Project_PCB/Motherboard_TopLayer.png" alt="Rover Main Control PCB Top Layer"
                     class="w-4/5 self-center">
                 <p class="py-2 text-center italic text-sm">Top Layer (Signal/GND)</p>
 
@@ -302,7 +311,7 @@
 
                 <p class="py-2"></p>
 
-                <img src="img/Project_PCB/Motherboard_3D.png" alt="Motherboard PCB Board View"
+                <img src="img/Project_PCB/Motherboard_3D.png" alt="Rover Main Control PCB Board View"
                     class="w-4/5 self-center">
                 <p class="py-2 text-center italic text-sm">3D View</p>
 

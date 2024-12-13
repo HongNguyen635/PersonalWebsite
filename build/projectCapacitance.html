@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hong Nguyen Personal Portfolio Website">
+    <title>Hong Nguyen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/" type="image/x-icon">
+    <script type="module" src="js/main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-zinc-50 dark:bg-black dark:text-sky-200 overflow-x-hidden">
+    <header class="w-screen sticky top-0 z-1">
+        <section class="py-6 max-w-4xl mx-auto flex justify-between items-center">
+            <div id="toggle-light-mode"
+                class="absolute rounded-full bg-sky-200 dark:bg-slate-800 w-fit p-2 mt-32 sm:mt-0 ml-[42.5%] sm:ml-8 hover:cursor-pointer">
+                <img id="sun-icon" src="img/sun.png" alt="Light Mode Image" class="hidden w-6 invert">
+                <img id="moon-icon" src="img/moon.png" alt="Light Mode Image" class="block w-6">
+            </div>
+
+            <nav class="bg-sky-200 dark:bg-slate-900 bg-opacity-50 rounded-full shadow-lg py-4 px-6 mx-auto space-x-8 text-xl justify-center"
+                aria-label="main">
+                <a href="index.html" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Home</a>
+                <a href="#contact" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Contact</a>
+            </nav>
+        </section>
+
+
+    </header>
+
+    <main class="max-w-4xl mx-auto text-black dark:text-white">
+        <!-- Cover Page section -->
+        <section class="p-8 flex flex-col justify-center items-center">
+            <h1 class="text-3xl font-bold text-center mb-6 mt-4 sm:mt-0">Capacitance Meter</h1>
+            <p class="text-lg text-center justify-center mb-8">An auto-ranging capacitance meter.</p>
+            <img src="img/Project_CapacitanceMeter/capacitanceMeterPCB.jpg" alt="Capacitance Meter Cover Page"
+                class="rounded-lg w-4/5">
+        </section>
+
+        <!-- Process section -->
+        <section class="p-8 flex flex-col">
+            <h2 class="text-xl font-bold mb-2">Timeline</h2>
+            <p class="mb-2">September 2024 &#8211; November 2024</p>
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Implementation Details</h2>
+            <p class="mb-2"><b>Tools:</b> Teensy Microcontroller, Altium, and LTspice.</p>
+            <p class="mb-2"><b>Teammate:</b> Donald P.
+            </p>
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Specifications</h2>
+            <ul class="list-disc list-inside">
+                <li class="ml-4 p-1">Wall powered, 5V DC only.</li>
+                <li class="ml-4 p-1">Auto ranges between 20 pF and 200 µF.</li>
+                <li class="ml-4 p-1">Resolution: the display has 7 total digits going from 0.0000 to 999.9999 in pF to
+                    µF, measurement is accurate within 3 and ½ digits.</li>
+                <li class="ml-4 p-1">Accuracy: 3% from 2 nF to 2 µF, and 10% from 20 pF to 2 nF and 2 µF to 200 µF.</li>
+                <li class="ml-4 p-1">Update with a button press.</li>
+                <li class="ml-4 p-1">Does not require any laptop or other computer to operate, just requires a power
+                    source.</li>
+                <li class="ml-4 p-1">Utilizes clip lead to clip lead adapters to connect to capacitors and 2 test points
+                    located on the board labeled Clipper+ and GND for positive end and ground end respectively.</li>
+            </ul>
+
+            <!-- Source code -->
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Source Code:</h2>
+            <p class="mb-2">Link to the GitHub repository: <a href="https://github.com/HongNguyen635/CapacitanceMeter"
+                    target="_blank" rel="noopener noreferrer" class="text-sky-600">Capacitance Meter Code</a></p>
+
+            <p class="py-6"></p>
+
+            <!-- Planning  -->
+            <h2 class="text-xl font-bold mb-2">Planning</h2>
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Tasks Checklist:</h3>
+
+            <ul class="list-decimal list-inside">
+                <li class="ml-4 p-1">Project timeline planning</li>
+                <li class="ml-4 p-1">Preliminary method research</li>
+                <li class="ml-4 p-1">Initial schematic design</li>
+                <li class="ml-4 p-1">Design review 1</li>
+                <li class="ml-4 p-1">Schematic design with feedback integration</li>
+                <li class="ml-4 p-1">PCB design</li>
+                <li class="ml-4 p-1">Design review 2</li>
+                <li class="ml-4 p-1">Feedback integration</li>
+                <li class="ml-4 p-1">Testing components</li>
+                <li class="ml-4 p-1">Breadboard prototype</li>
+                <li class="ml-4 p-1">PCB ordering</li>
+                <li class="ml-4 p-1">Software design</li>
+                <li class="ml-4 p-1">PCB assembly</li>
+                <li class="ml-4 p-1">Measurement testing</li>
+                <li class="ml-4 p-1">Measurement calibration</li>
+                <li class="ml-4 p-1"> design</li>
+                <li class="ml-4 p-1">Documentation and report</li>
+            </ul>
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Design</h2>
+            <p class="mb-2"><b>Theory of Operation:</b></p>
+            <p class="py-1"></p>
+            <p class="mb-2">To measurement capacitance, we use the constant current source method, deriving from the
+                capacitor equation.</p>
+            <p class="py-2"></p>
+
+            <img src="img/Project_CapacitanceMeter/Equation1.png" alt="Capacitance Equation"
+                class="rounded-lg w-2/5 self-center">
+
+            <p class="py-2"></p>
+            <p class="mb-2">In this equation, we hold the current constant and charge the capacitor to a certain
+                threshold, which is 1 V in our design, the calculated capacitance after rearranging the equation above
+                is as follows:</p>
+            <p class="py-2"></p>
+
+            <img src="img/Project_CapacitanceMeter/Equation2.png" alt="Capacitance Calculation Equation"
+                class="rounded-lg w-1/5 self-center">
+
+            <p class="py-6"></p>
+
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Schematic:</h3>
+
+            <p class="py-1"></p>
+
+            <img src="img/Project_CapacitanceMeter/Schematic.png" alt="Schematic" class="rounded-lg w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">Capacitance Meter Schematic</p>
+
+            <p class="py-1"></p>
+
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Software Flowchart:</h3>
+
+            <p class="py-1"></p>
+
+            <img src="img/Project_CapacitanceMeter/Flowchart.png" alt="Software Flowchart"
+                class="rounded-lg w-3/5 self-center">
+            <p class="py-2 text-center italic text-sm">Software Flowchart</p>
+
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">PCB:</h3>
+            <p class="mb-2">The PCB has 2 layers:</p>
+            <ul class="list-decimal list-inside">
+                <li class="ml-4 p-1">Signal (top layer)</li>
+                <li class="ml-4 p-1">Ground</li>
+            </ul>
+            <p class="my-2">Below is a picture of each layer:</p>
+
+            <p class="py-2"></p>
+
+            <img src="img/Project_CapacitanceMeter/PCB_Top.png" alt="Capacitance Meter Top Layer"
+                class="w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">Top Layer</p>
+
+            <p class="py-2"></p>
+
+            <img src="img/Project_CapacitanceMeter/PCB_Bottom.png" alt="Capacitance Meter Bottom Layer"
+                class="w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">Bottom Layer</p>
+
+            <p class="py-2"></p>
+
+            <img src="img/Project_CapacitanceMeter/PCB_TopAndBottom.png" alt="Capacitance Meter Top and Bottom Layer"
+                class="w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">Top and Bottom Layer</p>
+
+            <!-- Result section -->
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Outcomes:</h2>
+
+            <p class="py-1"></p>
+
+            <p class="mb-2">Below are the pictures of the finished prototype breadboard, PCB, and case.</p>
+
+            <p class="py-1"></p>
+
+            <img src="img/Project_CapacitanceMeter/BreadboardPrototype.jpg" alt="Breadboard Prototype"
+                class="rounded-lg w-3/5 self-center">
+            <p class="py-2 text-center italic text-sm">Breadboard Prototype</p>
+
+            <p class="py-1"></p>
+
+            <img src="img/Project_CapacitanceMeter/capacitanceMeterPCB.jpg" alt="Capacitance Meter PCB"
+                class="rounded-lg w-3/5 self-center">
+            <p class="py-2 text-center italic text-sm">Capacitance Meter PCB</p>
+
+            <p class="py-1"></p>
+
+            <img src="img/Project_CapacitanceMeter/PCBandCase.jpg" alt="Capacitance Meter PCB with Case"
+                class="rounded-lg w-2/5 self-center">
+            <p class="py-2 text-center italic text-sm">Capacitance Meter PCB with Case</p>
+
+            <p class="py-1"></p>
+
+            <img src="img/Project_CapacitanceMeter/Case.jpg" alt="Capacitance Meter PCB in the Case"
+                class="rounded-lg w-3/5 self-center">
+            <p class="py-2 text-center italic text-sm">Capacitance Meter PCB in the Case</p>
+
+        </section>
+
+        <!-- Next project link -->
+        <div class="flex justify-end px-6">
+            <a href="projectPlant.html" class="text-sky-600 p-2">
+                Next Project &#8594;
+            </a>
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+            </span>
+
+        </div>
+
+    </main>
+    <footer id="contact" class="bg-zinc-100 dark:bg-black dark:text-white py-8 mt-auto">
+        <section class="flex flex-col items-center justify-around">
+            <h2 class="not-italic font-semibold text-lg">Get In Touch</h2>
+            <address
+                class="flex flex-row justify-between items-center gap-1 sm:gap-4 px-6 max-w-[16rem] sm:max-w-xs mx-a">
+                <a href="https://www.linkedin.com/in/hong-nguyen-k/" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/linkedIn.png" alt="LinkedIn logo">
+                </a>
+                <a href="mailto:hong.nguyen.k54@gmail.com" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/Mail.png">
+                </a>
+                <a href="https://github.com/HongNguyen635" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/github.png" alt="GitHub logo">
+                </a>
+            </address>
+        </section>
+    </footer>
+</body>
+
+</html>

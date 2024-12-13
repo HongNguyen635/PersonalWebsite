@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hong Nguyen Personal Portfolio Website">
+    <title>Hong Nguyen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/" type="image/x-icon">
+    <script type="module" src="js/main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="min-h-screen bg-zinc-50 dark:bg-black dark:text-sky-200 overflow-x-hidden">
+    <header class="w-screen sticky top-0 z-1">
+        <section class="py-6 max-w-4xl mx-auto flex justify-between items-center">
+            <div id="toggle-light-mode"
+                class="absolute rounded-full bg-sky-200 dark:bg-slate-800 w-fit p-2 mt-32 sm:mt-0 ml-[42.5%] sm:ml-8 hover:cursor-pointer">
+                <img id="sun-icon" src="img/sun.png" alt="Light Mode Image" class="hidden w-6 invert">
+                <img id="moon-icon" src="img/moon.png" alt="Light Mode Image" class="block w-6">
+            </div>
+
+            <nav class="bg-sky-200 dark:bg-slate-900 bg-opacity-50 rounded-full shadow-lg py-4 px-6 mx-auto space-x-8 text-xl justify-center"
+                aria-label="main">
+                <a href="index.html" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Home</a>
+                <a href="#contact" class="hover:text-sky-800 dark:hover:text-white transition ease-in-out">Contact</a>
+            </nav>
+        </section>
+
+
+    </header>
+
+    <main class="max-w-4xl mx-auto text-black dark:text-white">
+        <!-- Cover Page section -->
+        <section class="p-8 flex flex-col justify-center items-center">
+            <h1 class="text-3xl font-bold text-center mb-6 mt-4 sm:mt-0">Plant Monitoring System</h1>
+            <p class="text-lg text-center justify-center mb-8">An IoT system to monitor your plant.</p>
+            <img src="img/Project_PlantMonitoring/Dark_Cover.jpg" alt="Capacitance Meter Cover Page"
+                class="rounded-lg w-4/5">
+        </section>
+
+        <!-- Process section -->
+        <section class="p-8 flex flex-col">
+            <h2 class="text-xl font-bold mb-2">Timeline</h2>
+            <p class="mb-2">September 2024 &#8211; December 2024</p>
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Implementation Details</h2>
+            <p class="mb-2"><b>Tools:</b> Arduino Mega and ESP32 microcontrollers.</p>
+            <p class="mb-2"><b>Teammate:</b> Donald P.
+            </p>
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Goals</h2>
+            <p class="mb-2">An IoT-enabled Plant Monitoring System with the following features:</p>
+            <ul class="list-disc list-inside">
+                <li class="ml-4 p-1"><b>Sensor Monitoring:</b> Tracks data from sensors, including air temperature, soil
+                    moisture, soil temperature, photocell (light level), water reservoir level, smoke/flame detection,
+                    and intrusion detection.</li>
+
+                <li class="ml-4 p-1"><b>Automated Actions:</b> Tracks data from sensors, including air temperature, soil
+                    moisture, soil temperature, photocell (light level), water reservoir level, smoke/flame detection,
+                    and intrusion detection.</li>
+
+                <ul class="list-disc list-inside px-8">
+                    <li class="ml-4 p-1"><b>Watering:</b> Automatically waters the plant when soil moisture falls below
+                        a set threshold.</li>
+
+                    <li class="ml-4 p-1"><b>Lighting:</b> Automatically turns on an LED grow light when detecting
+                        low-light conditions.</li>
+
+                    <li class="ml-4 p-1"><b>Warning Alerts:</b> Activates a buzzer to signal When the water reservoir
+                        for plant watering is empty or when birds or other potential threats are detected near the
+                        plant.</li>
+                </ul>
+
+                <li class="ml-4 p-1"><b>Manual Controls:</b></li>
+                <ul class="list-disc list-inside px-8">
+                    <li class="ml-4 p-1">Turning the LED grow light on/off.</li>
+                    <li class="ml-4 p-1">Adjusting LED brightness and color.</li>
+                    <li class="ml-4 p-1">Activating the water pump for 5s.</li>
+                    <li class="ml-4 p-1">Activating the warning buzzer manually.</li>
+                    <li class="ml-4 p-1">Displaying a friendly message for the viewer.</li>
+                </ul>
+            </ul>
+
+            <!-- Source code -->
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Source Code:</h2>
+            <p class="mb-2">Link to the GitHub repository: <a
+                    href="https://github.com/HongNguyen635/Plant_Monitoring_System" target="_blank"
+                    rel="noopener noreferrer" class="text-sky-600">Plant Monitoring System</a></p>
+
+            <p class="py-6"></p>
+
+            <!-- Planning  -->
+            <h2 class="text-xl font-bold mb-2">Planning</h2>
+            <h3 class="text-lg font-semibold mb-2 underline underline-offset-4">Tasks Checklist:</h3>
+
+            <ul class="list-decimal list-inside">
+                <li class="ml-4 p-1">Project timeline planning</li>
+                <li class="ml-4 p-1">Ideas generation and research</li>
+                <li class="ml-4 p-1">Preliminary system schematic sketch</li>
+                <li class="ml-4 p-1">Components gathering</li>
+                <li class="ml-4 p-1">System design</li>
+                <li class="ml-4 p-1">Hardware design</li>
+                <li class="ml-4 p-1">Software design</li>
+                <li class="ml-4 p-1">Software & hardware tasks assignment</li>
+                <li class="ml-4 p-1">Individual system component testing</li>
+                <li class="ml-4 p-1">System integration testing</li>
+                <li class="ml-4 p-1">System stress testing</li>
+                <li class="ml-4 p-1">Documentation</li>
+                <li class="ml-4 p-1">Demo preparation</li>
+                <li class="ml-4 p-1">Project report</li>
+            </ul>
+
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Design</h2>
+            <p class="mb-2">High-Level System Diagram</p>
+
+            <img src="img/Project_PlantMonitoring/HighLevelDiagram.png" alt="High-Level Diagram"
+                class="rounded-lg w-4/5 self-center">
+            <p class="py-2 text-center italic text-sm">High-Level System Diagram</p>
+
+            <!-- Result section -->
+            <p class="py-6"></p>
+
+            <h2 class="text-xl font-bold mb-2">Outcomes:</h2>
+
+            <p class="mb-2">Link to the dashboard website: <a href="https://plant-monitoring-dashboard.onrender.com/"
+                    target="_blank" rel="noopener noreferrer" class="text-sky-600">Plant Monitoring Dashboard</a></p>
+
+            <p class="py-1"></p>
+
+            <h2 class="font-bold mb-2">System pictures:</h2>
+
+            <p class="py-1"></p>
+
+            <img src="img/Project_PlantMonitoring/FullSystem.jpg" alt="Assembled System"
+                class="rounded-lg w-3/5 self-center">
+            <p class="py-2 text-center italic text-sm">Assembled System</p>
+
+            <p class="py-1"></p>
+
+            <img src="img/Project_PlantMonitoring/Dark_Cover.jpg" alt="Automated LED Grow Light in the Dark"
+                class="rounded-lg w-3/5 self-center">
+            <p class="py-2 text-center italic text-sm">Automated LED Grow Light in the Dark</p>
+
+            <p class="py-1"></p>
+
+            <img src="img/Project_PlantMonitoring/Corner1.jpg" alt="Circuit Close-up 1"
+                class="rounded-lg w-2/5 self-center">
+            <p class="py-2 text-center italic text-sm">Circuit Close-up 1</p>
+
+            <p class="py-1"></p>
+
+            <img src="img/Project_PlantMonitoring/Corner3.jpg" alt="Circuit Close-up 2"
+                class="rounded-lg w-3/5 self-center">
+            <p class="py-2 text-center italic text-sm">Circuit Close-up 2</p>
+
+            <p class="py-1"></p>
+
+            <img src="img/Project_PlantMonitoring/Corner2.jpg" alt="Plant Close-up"
+                class="rounded-lg w-3/5 self-center">
+            <p class="py-2 text-center italic text-sm">Plant Close-up</p>
+
+        </section>
+
+        <!-- Next project link -->
+        <div class="flex justify-end px-6">
+            <a href="projectPCB.html" class="text-sky-600 p-2">
+                Next Project &#8594;
+            </a>
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-sky-500"></span>
+            </span>
+
+        </div>
+
+    </main>
+    <footer id="contact" class="bg-zinc-100 dark:bg-black dark:text-white py-8 mt-auto">
+        <section class="flex flex-col items-center justify-around">
+            <h2 class="not-italic font-semibold text-lg">Get In Touch</h2>
+            <address
+                class="flex flex-row justify-between items-center gap-1 sm:gap-4 px-6 max-w-[16rem] sm:max-w-xs mx-a">
+                <a href="https://www.linkedin.com/in/hong-nguyen-k/" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/linkedIn.png" alt="LinkedIn logo">
+                </a>
+                <a href="mailto:hong.nguyen.k54@gmail.com" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/Mail.png">
+                </a>
+                <a href="https://github.com/HongNguyen635" target="_blank" class="hover:animate-pulse p-3">
+                    <img src="img/github.png" alt="GitHub logo">
+                </a>
+            </address>
+        </section>
+    </footer>
+</body>
+
+</html>
